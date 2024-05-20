@@ -3,7 +3,6 @@ class EndPoints {
   static const String profileEndPoint = 'auth/me';
   static const String refreshEndPoint = 'auth/refresh';
 
-  //Todos
   static const String todosEndPoint = 'todos';
   static const String singleTodoEndPoint = 'todos/{id}';
   static const String randomTodoEndPoint = 'todos/random';

@@ -47,7 +47,6 @@ class AppPreferences {
     return _sharedPreferences.getString(PREFS_KEY_TOKEN) ?? '';
   }
 
-//Save todos
   Future<void> saveTodosList(List<TodoModel> todos) async {
     List<String> jsonData =
         todos.map((todo) => jsonEncode(todo.toJson())).toList();

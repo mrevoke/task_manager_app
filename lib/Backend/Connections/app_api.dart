@@ -15,11 +15,6 @@ part 'app_api.g.dart';
 abstract class AppServiceClient {
   factory AppServiceClient(Dio dio, {String baseUrl}) = _AppServiceClient;
 
-//dart run build_runner build --delete-conflicting-outputs
-
-  //Handle endpoints
-
-  //---------Auth--------------------
   @POST(EndPoints.authEndPoint)
   Future<HttpResponse<LoginResponse>> login(@Body() LoginRequest request);
 
@@ -29,9 +24,6 @@ abstract class AppServiceClient {
   @POST(EndPoints.refreshEndPoint)
   Future<HttpResponse<LoginResponse>> refreshToken(
       @Body() RefreshRequest request);
-  //-----------------------------------
-
-  //---------Todos--------------------
 
   @GET(EndPoints.todosEndPoint)
   Future<HttpResponse<TodosModel>> todos({
@@ -66,5 +58,4 @@ abstract class AppServiceClient {
     @Path('id') required int id,
   });
 
-  //-----------------------------------
 }

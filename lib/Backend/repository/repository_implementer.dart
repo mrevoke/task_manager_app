@@ -23,7 +23,6 @@ class RepositoryImplementer extends Repository {
   RepositoryImplementer(
       {required this.appServiceClient, required this.networkInfo});
 
-//------------------Auth---------------------------
   @override
   Future<Result<LoginResponse, FailureModel>> login(
       LoginRequest loginRequest) async {
@@ -80,8 +79,6 @@ class RepositoryImplementer extends Repository {
     }
   }
 
-//-------------------------------------
-//--------------------Todos------------
   @override
   Future<Result<TodosModel, FailureModel>> todos(Pagination pagination) async {
     if (await networkInfo.isConnected) {
@@ -145,7 +142,6 @@ class RepositoryImplementer extends Repository {
         final response = await appServiceClient.todosByUserIdEndPoint(
             id: userId, skip: pagination.skip, limit: pagination.limit);
         if (response.response.statusCode == 200) {
-          // Filter todos by currentUserId
           final filteredTodos = response.data.todos
               .where((todo) => todo.userId == userId)
               .toList();
@@ -216,5 +212,4 @@ class RepositoryImplementer extends Repository {
       return Error(FailureModel(message: AppStrings().noInternetError));
     }
   }
-//-------------------------------------
 }

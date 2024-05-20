@@ -38,7 +38,7 @@ Future<void> initAppModule() async {
       appServiceClient: instance(), networkInfo: instance()));
   instance.registerFactory<AppBloc>(
       () => AppBloc(appPreferences: instance<AppPreferences>()));
-//---------------------------Auth-----------------------------------------
+//Auth
 //Usecases
   instance.registerLazySingleton<LoginUsecase>(
       () => LoginUsecase(repository: instance<Repository>()));
@@ -52,9 +52,9 @@ Future<void> initAppModule() async {
       refreshUsecase: instance<RefreshUsecase>()));
   instance.registerFactory<ProfileBloc>(
       () => ProfileBloc(profileUsecase: instance<ProfileUsecase>()));
-//-------------------------------------------------------------------------
 
-//---------------------------Todos-----------------------------------------
+
+//Todos
 
 //Usecases
   instance.registerLazySingleton<GetTodosUsecase>(
@@ -82,5 +82,5 @@ Future<void> initAppModule() async {
         addTodoUsecase: instance<AddTodoUsecase>(),
         updateTodoUsecase: instance<UpdateTodoUsecase>(),
       ));
-//-------------------------------------------------------------------------
+//
 }

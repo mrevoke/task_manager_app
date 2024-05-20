@@ -41,8 +41,7 @@ class _LoginViewState extends State<LoginView> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                // Title "Task Manager"
-                const Text(
+                 const Text(
                   'Task Manager',
                   textAlign: TextAlign.center,
                   style: TextStyle(
