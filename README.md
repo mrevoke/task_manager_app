@@ -1,5 +1,3 @@
-
-
 # Task Manager App
 
 This Flutter project is a task manager app that allows users to manage their tasks efficiently. The app provides features such as user authentication, task management, pagination, state management, local storage, and unit tests.
@@ -8,11 +6,46 @@ This Flutter project is a task manager app that allows users to manage their tas
 
 The Task Manager App is built using Flutter, a cross-platform framework for building mobile applications. It utilizes various Flutter packages and follows best practices to ensure a clean and intuitive user interface, robust state management, seamless performance, and proper data persistence.
 
+### Instructions to run:
+
+#### 1. Clone the Repository:
+
+```
+git clone <repository_url>
+```
+
+#### 2. Run the App:
+
+Navigate into the project directory and run the following command:
+
+```
+flutter run
+```
+
+#### 3. Sign In:
+
+Upon launching the app, you will be prompted to enter your username and password to access the application.
+
+#### 4. Explore and Interact:
+
+- **Expand Tiles:** Each item in the list is a tile. Expand each tile to perform actions.
+
+- **Delete and Update Data:** Tap on a tile to reveal options for deleting or updating the data associated with it.
+
+#### 5. Create New Tasks:
+
+To add a new task, tap on the floating action button (FAB) located at the bottom right corner of the screen. It has a plus sign icon. Fill in the required information to create a new tile containing the task.
+
+### Note:
+
+- **Performance:** If your device isn't experiencing any performance issues, you should have a smooth experience using the app. The application is optimized for efficient performance, in case any lag or issue is seen just rerun the app.
+
+
 ## Key Features
 
 ### 1. User Authentication
 
-The app implements user authentication using the provided [DummyJSON Auth Endpoint](https://dummyjson.com/docs/auth). Users can securely log in with their username and password.
+The app implements user authentication using the provided [DummyJSON Auth Endpoint](https://dummyjson.com/docs/auth). Users can securely login with their username and password.
 
 ### 2. Task Management
 
