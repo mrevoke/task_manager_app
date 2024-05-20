@@ -20,7 +20,9 @@ class GeneralInterceptor extends Interceptor {
         );
         int currentUserId = response.data['id'];
         
+        // Save token and current user ID in SharedPreferences
         SharedPreferences prefs = await SharedPreferences.getInstance();
+        await prefs.setString('userToken', token);
         await prefs.setInt('currentUserId', currentUserId);
         
       } catch (e) {
@@ -30,6 +32,10 @@ class GeneralInterceptor extends Interceptor {
     }
     super.onRequest(options, handler);
   }
+}
+Future<String?> getUserToken() async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  return prefs.getString('userToken');
 }
 Future<int?> getCurrentUserId() async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
